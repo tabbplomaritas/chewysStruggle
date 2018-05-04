@@ -8,13 +8,19 @@ const questions = [
   "On a scale of 1-10, how unafraid are you of the Galactic Empire",
 ]
 
-//create a function that we use to loop through array questions, accumulating the candidates score with each question asked. At the end, return the accumlated score.
-const friendQuestionaire = (poopFace) => {
-  alert(`${poopFace} is the next friend candidate.`)
+//create a function that we use to loop through array questions, accumulating the candidates' score with each question asked. At the end, return the accumlated score.
+const friendQuestionaire = (name) => {
+  alert(`${name} is the next friend candidate.`)
   let friendScore =0;
   for(let i = 0; i < questions.length; i++){
     let currentQuestion= Number(prompt(questions[i]));
+
+    //check that the user entered a valid number. if they did, they get their points, otherwise, they forfeit points from that question
+    if(currentQuestion < 11 && currentQuestion > 0){
     friendScore += currentQuestion;
+    }else{
+      alert("you did not enter a valid number. Please only enter number 1-10. You get zero points for not following directions. ");
+    }
   }
   return friendScore;
 }
