@@ -30,16 +30,16 @@ const candidate1 = friendQuestionaire("Kevin");
 const candidate2 = friendQuestionaire("Frankie"); 
 const candidate3 = friendQuestionaire("Ashley"); 
 
+//create array of the candidates scores so that we can grab the highest score using Math.max
 const candidateScores = [candidate1, candidate2, candidate3];
-
 let winner = Math.max(candidate1, candidate2, candidate3);
 
-
-if(winner = candidate1){
+//log the winner!
+if(winner === candidate1){
   console.log("Kevin is Chewy's New Friend");
-} else if (winner = candidate2){
+} else if (winner === candidate2){
   console.log("Frankie is Chewy's New Friend");
-}else if (winner = candidate3){
+}else if (winner === candidate3){
   console.log("Ashley is Chewy's New Friend");
 }
 
